@@ -8,6 +8,8 @@ def send(sock, data):
     data = base64.b64encode(data)
     data = struct.pack('>I', len(data)) + data
 
+    sock.send(data)
+
 def _recv_raw_data(sock, buf):
     data = ''
 
