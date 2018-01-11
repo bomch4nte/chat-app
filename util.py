@@ -3,6 +3,8 @@
 #
 #
 
+import struct
+import base64
 
 def send(sock, data):
     data = base64.b64encode(data)
